@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Veta Tugova](https://up.htmlacademy.ru/htmlcss/28/user/1314339).
-* Наставник: `Неизвестно`.
+* Наставник: [Марина Удовенко] https://htmlacademy.ru/profile/id7570
 
 ---
 
