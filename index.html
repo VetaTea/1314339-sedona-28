@@ -18,7 +18,7 @@
 </header>
 
 <main>
-  <h1>Sedona</h1>
+  <h1 class="visually-hidden">Sedona</h1>
   <img src="img/welcome.png" width="457" height="351" alt="Sedona main img">
   <section>
     <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
@@ -64,17 +64,24 @@
   <section>
     <h2>Заинтересовались?</h2>
     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    <!-- Здесь будет форма записи -->
+    <form action="" method="post">
+      Поиск гостиницы в Седоне<br>
+      <label>Дата заезда:<input id="appointment-date" type="text" name="date" placeholder="24 АПРЕЛЯ 2017"></label><br>
+      <label>Дата выезда:<input id="appointment-date" type="text" name="date" placeholder="04 ИЮЛЯ 2017"></label><br>
+      <label>Взрослые:<input type="number" name="adult" placeholder="2"></label><br>
+      <label>Дети:<input type="number" name="children" placeholder="0"></label><br>
+      <button type="submit">Найти</button>
+    </form>
   </section>
 </main>
 
 <footer>
   <section>
-    <h3>Контактная информация</h3>
+    <h3 class="visually-hidden">Контактная информация</h3>
     <p>#VisitSedona Тел:+7(495)666-01-66</p>
   </section>
   <section>
-    <h3>Социальные сети</h3>
+    <h3 class="visually-hidden">Социальные сети</h3>
     <ul>
       <li><a href="#"><img src="img/twitter.svg" width="46" height="48" alt="Твиттер"></a></li>
       <li><a href="#"><img src="img/fb.svg" width="46" height="48" alt="Фэйсбук"></a></li>
