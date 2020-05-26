@@ -18,12 +18,61 @@
 </header>
 
 <main>
+
   <section>
     <h2>Фильтр жилья</h2>
-    <!-- Здесь будет форма фильтра -->
+    <form action="https://echo.htmlacademy.ru" method="get" oninput="priceoutput.value=price.value">
+      <fieldset>
+        <legend>Инфраструктура:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="pool" id="pool-field" checked>
+            <label for="pool-field">Бассейн</label>
+          </li>
+          <li>
+            <input type="checkbox" name="parking" id="parking-field">
+            <label for="parking-field">Парковка</label>
+          </li>
+          <li>
+            <input type="checkbox" name="Wi-Fi" id="Wi-Fi-field">
+            <label for="Wi-Fi-field">Wi-Fi</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Тип жилья:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="hotel" id="hotel-field" checked>
+            <label for="hotel-field">Гостиница</label>
+          </li>
+          <li>
+            <input type="checkbox" name="motel" id="motel-field" checked>
+            <label for="motel-field">Мотель</label>
+          </li>
+          <li>
+            <input type="checkbox" name="apartments" id="apartments-field" checked>
+            <label for="apartments-field">Апартаменты</label>
+          </li>
+        </ul>
+      </fieldset>
+      <label for="price-field">Стоимость в сутки (Р):</label>
+      <input type="range" name="price" id="price-field" min="0" max="4000" step="100" value="3000" checked>
+      <output name="priceoutput"></output>
+      <br>
+      <button type="submit">Показать</button>
+    </form>
   </section>
+
   <section>
-    <h3>Найдено:</h3>
+    <h2>Найдено:</h2>
+    <h3>Сортировка:</h3>
+    <ul>
+      <li>По цене</li>
+      <li>По типу</li>
+      <li>По рейтингу</li>
+    </ul>
     <ul>
       <li>
         <a href="blank.html">
@@ -75,18 +124,17 @@
         <span>Рейтинг:9,2</span>
       </li>
     </ul>
-
   </section>
 
 </main>
 
 <footer>
   <section>
-    <h3>Контактная информация</h3>
+    <h3 class="visually-hidden">Контактная информация</h3>
     <p>#VisitSedona Тел:+7(495)666-01-66</p>
   </section>
   <section>
-    <h3>Социальные сети</h3>
+    <h3 class="visually-hidden">Социальные сети</h3>
     <ul>
       <li><a href="#"><img src="img/twitter.svg" width="46" height="48" alt="Твиттер"></a></li>
       <li><a href="#"><img src="img/fb.svg" width="46" height="48" alt="Фэйсбук"></a></li>
