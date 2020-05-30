@@ -1,0 +1,264 @@
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --white-opacity: rgba(255, 255, 255, 0.9);
+  --basic-grey: #EEEEEE;
+  --grey-light: #F2F2F2;
+  --grey-dark: #EBEBEB;
+  --blue-dark: #5496BD;
+  --blue-neutral: #669EC0;
+  --blue-light: #81B3D2;
+  --brown-dark: #503E33;
+  --brown-neutral: #604E43;
+  --brown-light: #766357;
+}
+body {
+  min-width: 1220px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  background-image: url("img/backgroundgroup.jpg"); /*как сделать бэкграунд разными для разных станиц?*/
+  background-position: top center; /*как правильно задать позицию, чтобы нав был выше, а не поверх*/
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.welcome {
+  position: absolute;
+  width: 456.65px;
+  height: 350.88px;
+  left: 411.38px;
+  top: 132.35px;
+} /* Отсебятина, надо будет исправлять*/
+
+.main-navigation {
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation-current a:not([href]) {
+  background-color: var(--basic-white);
+} /* не понимаю, зачем это надо*/
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: var(--blue-light);
+}
+.site-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3; /* не работает */
+}
+
+.reasons-list {
+  list-style: none;
+}
+
+.reasons {
+  text-align: center;
+}
+
+.reasons h3 { /*в барбершопе делали через дополнительный класс для li, но я не поняла зачем*/
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.index-columns {
+  background-color: var(--basic-grey);
+}
+
+.booking {
+  text-align: center;
+  line-height: 24px;
+}
+
+.booking h3 {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.booking-form {
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+}
+.booking-form a {
+  color: var(--basic-white);
+  background-color: var(--brown-light);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.booking-form a:hover {
+  background-color: var(--brown-neutral);
+}
+
+.booking-form a:focus {
+  background-color: var(--brown-dark);
+  opacity: 0,3;  /*ничего не становится полупрозрачным (не работает)
+  пробовала обернуть в див текст, но такой вариант не сработал*/
+}
+
+.booking-form input {
+  background-color:  var(--grey-light);
+}
+
+.booking-form  input:hover {
+  background-color: var(--grey-dark);
+}
+
+.booking-form  input:focus {
+  background-color: var(--basic-white);
+}
+
+.booking-form button {
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--blue-light);
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: inherit;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.booking-form button:hover {
+  color: var(--basic-white);
+  background-color: var(--blue-neutral);
+}
+
+.booking-form button:focus {
+  color: var(--basic-white);
+  opacity: 0.3; /*светлеет вся кнопка с задним фоном*/
+  background-color: var(--blue-dark);
+}
+
+.main-footer {
+  color: var(--basic-black);
+  background-color: var(--white-opacity);
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.footer-social-button a {
+  background-color: var(--blue-light); /*все иконки отображаются частично*/
+}
+
+.footer-social-button a:hover {
+  background-color: var(--blue-neutral);
+}
+.footer-social-button a:focus {
+  background-color: var(--blue-dark);
+  opacity: 0.3;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.restore {
+  color: var(--basic-black);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+.restore a:hover {
+  color: var(--blue-light); /*не понимаю, как сделать так, чтобы при нажатии изменялся цвет логотипа.
+  Это надо 3 разных логотипа скачивать и прикреплять, как изменяющийся background?*/
+}
+
+.restore a:focus {
+  color: var(--grey-light);
+}
+
+
+.hotels h3 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.button-book {
+  font-family: inherit;
+  background-color: var(--blue-light);
+  text-align: center;
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: inherit;
+  font-weight: bold;
+}
+
+.button-book:hover {
+  background-color: var(--blue-neutral);
+}
+
+.button-book:focus {
+  background-color: var(--blue-dark);
+}
+
+.button-info {
+  font-family: inherit;
+  background-color: var(--brown-light);
+  text-align: center;
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: inherit;
+  font-weight: bold;
+}
+
+.button-info:hover {
+  background-color: var(--brown-neutral);
+}
+
+.button-info:focus {
+  background-color: var(--brown-dark);
+}
+
+ul.hotels {
+  list-style: none;
+}
+
+.hotels a {
+  color: var(--basic-black);
+}
+
+.hotels a:hover {
+  color: var(--blue-light);
+}
+.site-navigation a:focus {
+  color: var(--basic-black);
+  opacity: 0.3; /* не работает */
+}
