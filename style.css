@@ -57,6 +57,7 @@ img.welcome {
 
 .site-navigation {
   list-style: none;
+  font-weight: bold;
 }
 
 .site-navigation-current a:not([href]) {
@@ -214,8 +215,8 @@ img.welcome {
   background-color: var(--blue-light);
   text-align: center;
   color: var(--basic-white);
-  font-size: 21px;
-  line-height: 26px;
+  font-size: inherit;
+  line-height: inherit;
   text-transform: inherit;
   font-weight: bold;
 }
@@ -233,8 +234,8 @@ img.welcome {
   background-color: var(--brown-light);
   text-align: center;
   color: var(--basic-white);
-  font-size: 21px;
-  line-height: 26px;
+  font-size: inherit;
+  line-height: inherit;
   text-transform: inherit;
   font-weight: bold;
 }
