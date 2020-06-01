@@ -28,6 +28,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -66,16 +70,19 @@ img.welcome {
 
 .site-navigation a {
   color: var(--basic-black);
+  opacity: 1;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a:hover {
   color: var(--blue-light);
+  opacity: 1;
 }
+
 .site-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3; /* не работает */
 }
+
 
 .reasons-list {
   list-style: none;
@@ -259,7 +266,57 @@ ul.hotels {
 .hotels a:hover {
   color: var(--blue-light);
 }
-.site-navigation a:focus {
+
+.catalog {
+  background: var(--basic-white);
+}
+
+.founded h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting li {
   color: var(--basic-black);
-  opacity: 0.3; /* не работает */
+  opacity: 0.3;
+  border-bottom: 1px dashed var(--blue-light);
+}
+
+.sorting li:hover {
+  color: var(--blue-light);
+  opacity: 1;
+  border-bottom: 1px dashed var(--blue-light);
+}
+
+.sorting li:active{
+  color: var(--basic-black);
+  opacity: 1;
+  border-bottom: none;
+}
+
+.sorting .active {
+  color: var(--blue-light);
+  opacity: 1;
+  border-bottom: none;
+}
+
+.filter {
+  background-image: url("img/background-catalog.jpg");
+  background-repeat: no-repeat;
+  background-color: var(--blue-dark);
+}
+
+.filter {
+  color: var(--basic-white);
+}
+
+.filter h2 {
+  font-size: 16px;
+  font-weight: bold;
 }
