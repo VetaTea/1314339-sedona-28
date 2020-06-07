@@ -12,6 +12,13 @@
   --brown-neutral: #604E43;
   --brown-light: #766357;
 }
+
+/* ОСНОВНЫЕ (3 блока и лого)*/
+
+html {
+  height: 100%;
+}
+
 body {
   min-width: 1220px;
   margin: 0;
@@ -23,9 +30,29 @@ body {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  background-image: url("img/backgroundgroup.jpg"); /*как сделать бэкграунд разными для разных станиц?*/
-  background-position: top center; /*как правильно задать позицию, чтобы нав был выше, а не поверх*/
   background-repeat: no-repeat;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.main-page {
+  background-image: url("img/backgroundgroup.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-header-logo {
+  width: 138px;
+  height: 70px;
+  /*order: */
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .visually-hidden {
@@ -41,27 +68,34 @@ img {
   height: auto;
 }
 
-img.welcome {
-  position: absolute;
-  width: 456.65px;
-  height: 350.88px;
-  left: 411.38px;
-  top: 132.35px;
-} /* Отсебятина, надо будет исправлять*/
+/* HEADER */
 
 .main-navigation {
   line-height: 26px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*width: auto;
+  justify-content: space-around;*/
 }
 
 .main-navigation-wrapper {
   background-color: var(--basic-white);
+  width: 100%;
+  /*margin-bottom: 60px;*/
 }
 
 .site-navigation {
   list-style: none;
   font-weight: bold;
+  margin-top: 0;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  min-height: 56px;
+  list-style: none;
 }
 
 .site-navigation-current a:not([href]) {
@@ -83,6 +117,15 @@ img.welcome {
   opacity: 0.3; /* не работает */
 }
 
+/* MAIN INDEX */
+
+.welcome {
+  position: center;
+  padding-top: 77px;
+  padding-bottom: 80px;
+  padding-left: 371px;
+  padding-right: 371px;
+}
 
 .reasons-list {
   list-style: none;
@@ -96,44 +139,97 @@ img.welcome {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
+  padding-top: 98px;
 }
 
-.index-columns {
+.index-reasons-columns {
   background-color: var(--basic-grey);
+  min-height: 256px;
 }
 
-.booking {
+.reasons-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.reasons-columns li {
+  align-self: center;
+}
+
+.reasons-row-1 {
+  display: grid;
+  grid-template-columns: 400px 800px;
+  min-height: 256px;
+}
+
+.reasons-row-2 {
+  display: grid;
+  grid-template-columns: 800px 400px;
+  min-height: 256px;
+}
+
+.reasons-rows {
+  background-color: var(--blue-light);
+  color: var(--basic-white);
+}
+.second-reason {
+  order: -1;
+}
+
+div.booking, section.booking {
   text-align: center;
   line-height: 24px;
 }
 
-.booking h3 {
+.booking {
+  margin-bottom: 78px;
+}
+
+.booking h2 {
   font-size: 30px;
   line-height: 24px;
   font-weight: bold;
 }
 
-.booking-form {
-  text-align: center;
-  line-height: 26px;
-  font-weight: bold;
+section.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.booking-form a {
-  color: var(--basic-white);
+
+.booking-search {
+  width: 568px;
+  height: 86px;
   background-color: var(--brown-light);
+}
+
+.booking-search a {
+  color: var(--basic-white);
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 }
 
-.booking-form a:hover {
+.booking-search a:hover {
   background-color: var(--brown-neutral);
 }
 
-.booking-form a:focus {
+.booking-search a:focus {
   background-color: var(--brown-dark);
   opacity: 0,3;  /*ничего не становится полупрозрачным (не работает)
   пробовала обернуть в див текст, но такой вариант не сработал*/
+}
+
+.booking-form {
+  display: grid;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  border: 1px solid green;
+  width: 568px;
+  height: 395px;
+  background-color: var(--basic-white);
 }
 
 .booking-form input {
@@ -170,16 +266,56 @@ img.welcome {
   background-color: var(--blue-dark);
 }
 
+.search-button {
+  margin: 55px;
+  margin-top: 0px;
+}
+
+/* FOOTER */
+
 .main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid green;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
   color: var(--basic-black);
   background-color: var(--white-opacity);
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
+.contacts {
+  padding-left: 111px;
+}
+
+.footer-social {
+  justify-self: center;
+}
+
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  gap: 6px;
+}
+
+.restore {
+  justify-self: end;
+  color: var(--basic-black);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  padding-right: 138px;
+}
+
 
 .footer-social-button a {
   background-color: var(--blue-light); /*все иконки отображаются частично*/
+  margin: 6px;
+  padding: 10px;
 }
 
 .footer-social-button a:hover {
@@ -188,17 +324,6 @@ img.welcome {
 .footer-social-button a:focus {
   background-color: var(--blue-dark);
   opacity: 0.3;
-}
-
-.footer-social ul {
-  list-style: none;
-}
-
-.restore {
-  color: var(--basic-black);
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: normal;
 }
 
 .restore a:hover {
@@ -210,6 +335,22 @@ img.welcome {
   color: var(--grey-light);
 }
 
+/* MAIN CATALOG */
+
+.hotels {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.hotels li {
+  border: 1px solid var(--grey-light);
+  display: flex;
+}
+
+.hotels-img {
+  order: 1;
+}
 
 .hotels h3 {
   font-weight: bold;
@@ -265,10 +406,6 @@ ul.hotels {
 
 .hotels a:hover {
   color: var(--blue-light);
-}
-
-.catalog {
-  background: var(--basic-white);
 }
 
 .founded h3 {
