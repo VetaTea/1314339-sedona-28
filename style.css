@@ -46,9 +46,11 @@ body {
 .main-header-logo {
   width: 138px;
   height: 70px;
-  /*order: */
+  order: 1;
 }
-
+.order {
+  order: -1;
+}
 main {
   width: 1200px;
   margin: 0 auto;
@@ -74,20 +76,17 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   background-color: var(--basic-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*width: auto;
-  justify-content: space-around;*/
 }
 
 .main-navigation-wrapper {
   background-color: var(--basic-white);
-  width: 100%;
   /*margin-bottom: 60px;*/
 }
 
 .site-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   list-style: none;
   font-weight: bold;
   margin-top: 0;
@@ -120,11 +119,10 @@ img {
 /* MAIN INDEX */
 
 .welcome {
-  position: center;
-  padding-top: 77px;
-  padding-bottom: 80px;
-  padding-left: 371px;
-  padding-right: 371px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 
 .reasons-list {
