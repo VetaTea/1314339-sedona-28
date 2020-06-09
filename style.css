@@ -38,9 +38,7 @@ body {
 }
 
 .main-page {
-  background-image: url("img/backgroundgroup.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
+
 }
 
 .main-header-logo {
@@ -79,6 +77,9 @@ img {
 }
 
 .main-navigation-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
   background-color: var(--basic-white);
   /*margin-bottom: 60px;*/
 }
@@ -123,6 +124,12 @@ img {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  background-image: url("img/backgroundgroup.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 75px;
+  padding-bottom: 85px;
+  border: 1px solid darkcyan;
 }
 
 .reasons-list {
@@ -155,25 +162,13 @@ img {
   align-self: center;
 }
 
-.reasons-row-1 {
-  display: grid;
-  grid-template-columns: 400px 800px;
-  min-height: 256px;
-}
 
-.reasons-row-2 {
-  display: grid;
-  grid-template-columns: 800px 400px;
-  min-height: 256px;
-}
 
 .reasons-rows {
   background-color: var(--blue-light);
   color: var(--basic-white);
 }
-.second-reason {
-  order: -1;
-}
+
 
 div.booking, section.booking {
   text-align: center;
