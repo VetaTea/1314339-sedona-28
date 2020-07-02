@@ -2,8 +2,9 @@
 
 :root {
     --basic-black: #000000;
+    --black-opacity: rgba(0, 0, 0, 0.3);
     --basic-white: #ffffff;
-    --white-opacity: rgba(255, 255, 255, 0.9);
+    --white-opacity: rgba(255, 255, 255, 0.3);
     --grey-neutral: #EEEEEE;
     --grey-light: #F2F2F2;
     --grey-dark: #EBEBEB;
@@ -15,6 +16,8 @@
     --brown-light: #766357;
     --brown-black: #333333;
     --grey-text: #666666;
+    --toogle: #ababab;
+    --shadow: #cfcfcf;
 }
 
 html {
@@ -184,22 +187,24 @@ footer {
 }
 
 .social {
-    width: 145px;
-    justify-self: center;
-    text-align: center;
+  width: 160px;
+  justify-self: center;
+  text-align: center;
 }
 
 .social ul {
-    width: 141px;
+  width: 156px;
+  margin: 0 auto;
 }
 
+
 .social-button {
-    width: 46px;
-    height: 48px;
-    background-color: var(--blue-light);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 46px;
+    height: 48px;
+    background-color: var(--blue-light);
 }
 
 .social-button:hover,
@@ -207,7 +212,15 @@ footer {
     background-color: var(--blue-neutral);
 }
 
-.contacts img {
+.social-button:active {
+  background-color: var(--blue-dark);
+}
+
+.social-button:active path {
+  fill: var(--white-opacity);
+}
+
+.contacts svg {
     padding-top: 28px;
     padding-left: 168px;
 }
@@ -220,6 +233,15 @@ footer {
 .restore p {
     padding-top: 38px;
     padding-left: 45px;
+}
+
+.logo-html-academy:hover path,
+.logo-html-academy:focus path {
+  fill: var(--blue-light);
+}
+
+.logo-html-academy:active path {
+  fill: var(--black-opacity);
 }
 
 /*FOOTER*/
@@ -430,12 +452,11 @@ button.button-box {
 button.button-box:hover,
 button.button-box:focus {
     background-color: var(--brown-neutral);
-    opacity: 1;
 }
 
 button.button-box:active {
     background-color: var(--brown-dark);
-    opacity: 0.3;
+    color: var(--white-opacity);
 }
 
 .form {
@@ -443,9 +464,6 @@ button.button-box:active {
     min-height: 285px;
     margin-left: 315px;
     margin-bottom: 78px;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
     padding: 55px;
     position: relative;
     /*background-color: cadetblue;*/
@@ -467,6 +485,33 @@ button.button-box:active {
     background-color: var(--basic-white);
 }
 
+.calendar:hover path,
+.calendar:focus path {
+  fill: var(--basic-black);
+}
+
+.calendar:active path {
+  fill: var(--blue-light);
+}
+
+.minus:hover path,
+.minus:focus path {
+  fill: var(--basic-black);
+}
+
+.minus:active path {
+  fill: var(--blue-light);
+}
+
+.plus:hover path,
+.plus:focus path {
+  fill: var(--basic-black);
+}
+
+.plus:active path {
+  fill: var(--blue-light);
+}
+
 .arrive input {
     width: 333px;
     padding-left: 13px;
@@ -479,6 +524,10 @@ button.button-box:active {
     right: 64px;
 }
 
+.departure {
+  margin-top: 28px;
+}
+
 .departure input {
     width: 334px;
     padding-left: 12px;
@@ -489,6 +538,12 @@ button.button-box:active {
     position: absolute;
     top: 129px;
     right: 64px;
+}
+
+.guests {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .adult input {
@@ -540,17 +595,18 @@ p.children {
     font-size: 21px;
     font-weight: inherit;
     line-height: inherit;
+    margin-top: 55px;
 }
+
 
 .search-button:hover,
 .search-button:focus {
     background-color: var(--blue-neutral);
-    opacity: 1;
 }
 
 .search-button:active {
     background-color: var(--blue-dark);
-    opacity: 0.3;
+    color: var(--white-opacity);
 }
 
 /*
@@ -588,6 +644,7 @@ fieldset {
     font-weight: normal;
 }
 
+/*
 .price label {
     font-weight: bold;
 }
@@ -596,7 +653,7 @@ fieldset {
     padding-left: 200px;
 }
 
-/*.price button {
+.price button {
     width: 97px;
     height: 17px;
     padding-top: 7px;
@@ -605,6 +662,95 @@ fieldset {
     border: 2px solid var(--basic-white);
     border-radius: 2px;
 }*/
+
+.filter-item {
+  border: none;
+  width: 300px;
+}
+
+.filter-item legend {
+  padding-left: 34px;
+  padding-top: 27px;
+  padding-bottom: 5px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-around;
+  width: 313px;
+  height: 32px;
+  border: 2px solid var(--basic-white);
+  border-radius: 5px;
+  margin-left: 33px;
+  margin-bottom: 20px;
+}
+
+.price-controls input {
+  text-align: center;
+  font-weight: normal;
+  width: 70px;
+  height: 32px;
+  background-color: transparent;
+  color: var(--basic-white);
+  /* width: 60px;
+   padding: 10px;
+   margin-left: 10px;*/
+}
+
+.range-filter {
+  width: 317px;
+}
+
+.range-controls {
+  position: relative;
+}
+
+.range-controls .scale {
+  margin-left: 33px;
+  width: 316px;
+  height: 2px;
+  margin-bottom: 20px;
+  background: var(--white-opacity);
+}
+
+
+.range-controls .bar {
+  width: 85%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toogle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--shadow);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 33px;
+}
+
+.range-controls .toggle-max {
+  left: 285px;
+}
+
+.filter-item button {
+  width: 137px;
+  height: 36px;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: transparent;
+  margin-top: 13px;
+  margin-left: 118px;
+}
 
 .found {
     min-height: 86px;
@@ -680,6 +826,15 @@ fieldset {
     padding-left: 0;
 }
 
+.hotel-info h3:hover,
+.hotel-info h3:focus {
+  color: var(--blue-light);
+}
+
+.hotel-info h3:active {
+  color: var(--black-opacity);
+}
+
 .hotel-info p {
     font-weight: normal;
     padding-top: 5px;
@@ -733,6 +888,7 @@ fieldset {
 
 .button-info:active {
     background-color: var(--blue-dark);
+    color: var(--white-opacity);
 }
 
 .button-book {
@@ -748,4 +904,5 @@ fieldset {
 
 .button-book:active {
     background-color: var(--brown-dark);
+    color: var(--white-opacity);
 }
