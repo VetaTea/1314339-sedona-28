@@ -5,6 +5,7 @@
     --black-opacity: rgba(0, 0, 0, 0.3);
     --basic-white: #ffffff;
     --white-opacity: rgba(255, 255, 255, 0.3);
+    --white-opacity-footer: rgba(255, 255, 255, 0.9);
     --grey-neutral: #EEEEEE;
     --grey-light: #F2F2F2;
     --grey-dark: #EBEBEB;
@@ -171,6 +172,11 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     font-size: 21px;
+}
+
+.index-footer {
+  background-color: var(--white-opacity-footer);
+  margin-top: -120px;
 }
 
 .social {
@@ -435,6 +441,10 @@ p.question {
 }
 
 .booking {
+  background-image: url("img/map.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height: 883px;
 }
 
 button.button-box {
@@ -462,7 +472,9 @@ button.button-box:active {
     margin-bottom: 78px;
     padding: 55px;
     position: relative;
-    /*background-color: cadetblue;*/
+    background-color: var(--basic-white);
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
 }
 
 .booking input {
@@ -801,6 +813,13 @@ input::-webkit-inner-spin-button {
   margin-top: 13px;
   margin-left: 118px;
 }
+
+.filter-item button:hover,
+.filter-item button:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
 
 .found {
     min-height: 85px;
