@@ -982,7 +982,7 @@ input::-webkit-inner-spin-button {
 }
 
 .hotel-info div {
-    padding-top: 12px;
+  padding-top: 13px;
 }
 
 .star {
@@ -1018,8 +1018,9 @@ input::-webkit-inner-spin-button {
 
 .button-info {
     background-color: var(--blue-light);
-    width: 110px;
-    height: 27px;
+    color: var(--basic-white);
+    padding: 4px 16px 4px 17px;
+    line-height: 21px;
 }
 
 .button-info:focus,
@@ -1034,8 +1035,10 @@ input::-webkit-inner-spin-button {
 
 .button-book {
     background-color: var(--brown-light);
-    width: 142px;
-    height: 27px;
+    color: var(--basic-white);
+    padding: 4px 17px 4px 16px;
+    line-height: 21px;
+    margin-left: 2px;
 }
 
 .button-book:focus,
