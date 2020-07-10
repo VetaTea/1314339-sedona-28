@@ -533,6 +533,10 @@ button.button-box:active {
     background-color: var(--basic-white);
 }
 
+button.calendar {
+  background-color: transparent;
+}
+
 .calendar:hover path,
 .calendar:focus path {
   fill: var(--basic-black);
@@ -604,12 +608,12 @@ button.button-box:active {
   background-color: var(--grey-light);
 }
 
-.minus:hover path,
-.minus:focus path {
+.minus:hover rect,
+.minus:focus rect {
   fill: var(--basic-black);
 }
 
-.minus:active path {
+.minus:active rect {
   fill: var(--blue-light);
 }
 
@@ -731,6 +735,12 @@ fieldset {
 .input-check:checked:disabled + .check-box {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
+
+/*.check-box:hover,
+.check-box:focus {
+  border: 1px solid var(--blue-light);
+}*/
+
 
 
 .filter-item {
@@ -875,6 +885,8 @@ input::-webkit-inner-spin-button {
     color: var(--black-opacity);
     border-bottom: 1px dotted var(--blue-light);
     margin-right: 33px;
+    width: 11px;
+    height: 10px;
 }
 
 .sorting a:focus,
@@ -893,15 +905,16 @@ input::-webkit-inner-spin-button {
     border-bottom: none;
 }
 
-.found .up {
+.sorting-up {
   margin-left: 503px;
   margin-top: 2px;
 }
 
-.found .down {
+.sorting-down {
   margin-left: 12px;
   margin-top: 2px;
 }
+
 
 .found path:hover,
 .found path:focus {
